@@ -11,9 +11,5 @@ phrenetic
 * air and ground units
 
 # Tasks
-* sprite for a simple air unit
-* scrolling simple background
-* document initial unit taxonomy
-* ...
-
+See https://trello.com/b/Te0FsW4V/phrenetic; drop me a line me to be added to the board.
 
