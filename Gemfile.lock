@@ -2,8 +2,8 @@ GEM
   remote: https://rubygems.org/
   specs:
     gosu (0.7.50)
-    mini_portile (0.5.2)
-    multi_json (1.8.4)
+    mini_portile (0.5.3)
+    multi_json (1.9.2)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     tmx (0.1.4)
