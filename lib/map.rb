@@ -12,12 +12,23 @@ class Map
 
   private
 
-  # Internal: read in tileset image(s) and output array(s) of Gosu images
+  # Internal: given an array of Gosu::Tileset, output an array
+  # of arrays of type Gosu::Image
   #
   # window - the Gosu::Window in which these tiles will be drawn
   def load_tilesets(window)
-    @tmx.tilesets.each do
-      #load_tiles(window, source, tile_width, tile_height, tileable)
-    end
+    @tmx.tilesets.map { |tileset| load_images(window, tileset) }
+  end
+
+  # Internal: given a tileset, output an array of type Gosu::Image
+  #
+  # window  - the Gosu::Window in which these tiles will be drawn
+  # tileset - a Gosu::Tileset
+  def load_images(window, tileset)
+    source      = Phrenetic::MAPS_PATH + '/' + tileset.image
+    tile_width  = tileset.tilewidth
+    tile_height = tileset.tileheight
+    tileable    = true
+    Gosu::Image.load_tiles(window, source, tile_width, tile_height, tileable)
   end
 end
